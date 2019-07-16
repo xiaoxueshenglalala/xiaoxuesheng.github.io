@@ -62,9 +62,9 @@
     root: '/',
     scheme: 'Gemini',
     version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"left","width":220,"display":"post","offset":12,"onmobile":false},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":null},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -599,7 +599,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/01/15/test/" class="post-title-link" itemprop="url">'Markdown语法汇总'</a>
+                <a href="/2019/01/15/test/" class="post-title-link" itemprop="url">Markdown语法汇总-hexo</a>
               
             
           </h1>
@@ -639,7 +639,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-16 10:05:02" itemprop="dateModified" datetime="2019-07-16T10:05:02+08:00">2019-07-16</time>
+                <time title="修改时间：2019-07-16 16:25:51" itemprop="dateModified" datetime="2019-07-16T16:25:51+08:00">2019-07-16</time>
               </span>
             
           
@@ -682,7 +682,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">0</span>
+              <span title="本文字数">1.3k</span>
             </span>
           
 
@@ -716,8 +716,12 @@
         
           
             <p>
-              
-              
+              1.标题使用 # 号标记更方便  
+标题# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题  
+
+2.段落Markdown默认段落的换行是使用两个以上空格加上回车，hexo对此有优化，所以即使不加空格仅使用回车依旧可以实现换行功能。
+2.1 字体字
+              ...
             </p>
           <!--noindex-->
           
@@ -870,32 +874,58 @@
           
 
           
-
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Learn
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://github.com/" title="https://github.com/" rel="noopener" target="_blank">GitHub</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.kaggle.com/" title="https://www.kaggle.com/" rel="noopener" target="_blank">Kaggle</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.liaoxuefeng.com/" title="https://www.liaoxuefeng.com/" rel="noopener" target="_blank">廖雪峰</a>
-                  </li>
-                
-              </ul>
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/" title="GitHub &rarr; https://github.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-111"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.kaggle.com/" title="Kaggle &rarr; https://www.kaggle.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-111"></i>Kaggle</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.liaoxuefeng.com/" title="廖雪峰 &rarr; https://www.liaoxuefeng.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-111"></i>廖雪峰</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.runoob.com/" title="菜鸟教程 &rarr; https://www.runoob.com/" rel="noopener" target="_blank"><i class="fa fa-fw fa-111"></i>菜鸟教程</a>
+                </span>
+              
             </div>
+          
+
+          
+
+          
           
 
           
@@ -905,8 +935,13 @@
       
 
       
-
     </div>
+
+    <div id="music163player">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="300" height="80" src="//music.163.com/outchain/player?type=2&id=505818432&auto=1&height=66">
+      </iframe>
+    </div>
+
   </aside>
   <div id="sidebar-dimmer"></div>
 
@@ -1425,8 +1460,81 @@
 
   
 
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
 
   
+
 
 </body>
 </html>

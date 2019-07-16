@@ -1,59 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/01/15/hello-world/"/>
-      <url>/2019/01/15/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F01%2F15%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
-          
-          <category> 分类三 </category>
-          
+        <category>分类三</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 哈 </tag>
-            
-            <tag> 嘻 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>&#39;Markdown语法汇总&#39;</title>
-      <link href="/2019/01/15/test/"/>
-      <url>/2019/01/15/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>哈</tag>
+        <tag>嘻</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown语法汇总-hexo]]></title>
+    <url>%2F2019%2F01%2F15%2Ftest%2F</url>
+    <content type="text"><![CDATA[1.标题使用 # 号标记更方便 标题123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题 2.段落Markdown默认段落的换行是使用两个以上空格加上回车，hexo对此有优化，所以即使不加空格仅使用回车依旧可以实现换行功能。 2.1 字体字体1234567浮生六记 *斜体文本* _斜体文本_ **粗体文本** __粗体文本__ ***粗斜体文本*** ___粗斜体文本___ 浮生六记浮生六记浮生六记浮生六记浮生六记浮生六记浮生六记 2.2 分隔线分割线12345**** * ****** - - ----------- 2.3 删除线hexo默认前后一个波浪线即可实现删除线功能 分割线123浮生六记 ~浮生六记~ ~~浮生六记~~ 浮生六记浮生六记浮生六记 2.4 下划线可用HTML&lt;u&gt;……&lt;/u&gt;实现下划线功能注：反引号有转译功能 下划线1&lt;u&gt;浮生六记&lt;/u&gt;好棒啊 浮生六记好棒啊 2.5 脚注&amp;超链接Markdown脚注语法在hexo不兼容，此处用超链接加文字功能实现鼠标悬于上方显示想要文字。 脚注&超链接1234[^浮生六记] [^浮生六记]: 老沈贼厉害！！！[浮生六记](https://www.pfchen.top &quot;老沈贼厉害！！！&quot;) 浮生六记 3. 列表3.1 有序列表和无序列表Markdown 支持有序列表和无序列表。无序列表使用星号*、加号+或是减号-作为列表标记： 无序列表123456789* 浮生一记* 浮生二记* 浮生三记+ 浮生一记+ 浮生二记+ 浮生三记- 浮生一记- 浮生二记- 浮生三记 浮生一记 浮生二记 浮生三记 浮生一记 浮生二记 浮生三记 浮生一记 浮生二记 浮生三记 有序列表使用数字并加上.号来表示，如： 有序列表1231. 浮生一记2. 浮生二记3. 浮生三记 浮生一记 浮生二记 浮生三记 3.2 列表嵌套列表嵌套只需在子列表中的选项添加四个空格即可。 列表嵌套1234561. 浮生一记： - 一一记 - 一二记2. 浮生二记： - 二一记 - 二二记 浮生一记： 一一记 一二记 浮生二记： 二一记 二二记 4. 区块区块&列表嵌套12345678910&gt; 浮生六记：&gt; &gt; 卷一《闺房记乐》 &gt; &gt; 卷二《闲情记趣》 &gt; &gt; 卷三《坎坷记愁》 &gt; &gt; 卷四《浪游记快》 &gt; &gt; 卷五《中山记历》 &gt; &gt; * 佚失 &gt; &gt; 卷六《养生记道》&gt; &gt; * 佚失 浮生六记： 卷一《闺房记乐》卷二《闲情记趣》卷三《坎坷记愁》卷四《浪游记快》卷五《中山记历》 佚失 卷六《养生记道》 佚失 5 代码Markdown脚注语法在hexo不兼容，此处用超链接加文字功能实现鼠标悬于上方显示想要文字。 脚注&超链接1`printf()` 函数 printf() 函数]]></content>
       <categories>
-          
-          <category> 基础语言 </category>
-          
+        <category>基础语言</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
 </search>
