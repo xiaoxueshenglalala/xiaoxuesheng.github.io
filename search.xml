@@ -1,59 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/01/15/hello-world/"/>
-      <url>/2019/01/15/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F01%2F15%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <categories>
-          
-          <category> 分类三 </category>
-          
+        <category>分类三</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 哈 </tag>
-            
-            <tag> 嘻 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Markdown语法汇总-hexo</title>
-      <link href="/2019/01/15/Markdown%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB-hexo/"/>
-      <url>/2019/01/15/Markdown%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB-hexo/</url>
-      
-        <content type="html"><![CDATA[<h1 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h1><p>使用 # 号标记更方便  </p><figure class="highlight plain"><figcaption><span>标题</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>  <p><img src="/2019/01/15/Markdown语法汇总-hexo/title.png" alt></p><h1 id="2-段落"><a href="#2-段落" class="headerlink" title="2.段落"></a>2.段落</h1><p>Markdown默认段落的换行是使用两个以上空格加上回车，hexo对此有优化，所以即使不加空格仅使用回车依旧可以实现换行功能。</p><h2 id="2-1-字体"><a href="#2-1-字体" class="headerlink" title="2.1 字体"></a>2.1 字体</h2><figure class="highlight plain"><figcaption><span>字体</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">浮生六记  </span><br><span class="line">*斜体文本*  </span><br><span class="line">_斜体文本_  </span><br><span class="line">**粗体文本**  </span><br><span class="line">__粗体文本__   </span><br><span class="line">***粗斜体文本***  </span><br><span class="line">___粗斜体文本___  </span><br></pre></td></tr></table></figure>  <p>浮生六记<br><em>浮生六记</em><br><em>浮生六记</em><br><strong>浮生六记</strong><br><strong>浮生六记</strong><br><strong><em>浮生六记</em></strong><br><strong><em>浮生六记</em></strong>  </p><h2 id="2-2-分隔线"><a href="#2-2-分隔线" class="headerlink" title="2.2 分隔线"></a>2.2 分隔线</h2><figure class="highlight plain"><figcaption><span>分割线</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">***** </span><br><span class="line">- - -</span><br><span class="line">----------  </span><br></pre></td></tr></table></figure><hr><hr><hr><hr><hr><h2 id="2-3-删除线"><a href="#2-3-删除线" class="headerlink" title="2.3 删除线"></a>2.3 删除线</h2><p>hexo默认前后一个波浪线即可实现删除线功能</p><figure class="highlight plain"><figcaption><span>分割线</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">浮生六记  </span><br><span class="line">~浮生六记~  </span><br><span class="line">~~浮生六记~~  </span><br></pre></td></tr></table></figure><p>浮生六记<br><del>浮生六记</del><br><del>浮生六记</del> </p><h2 id="2-4-下划线"><a href="#2-4-下划线" class="headerlink" title="2.4 下划线"></a>2.4 下划线</h2><p>可用HTML<code>&lt;u&gt;……&lt;/u&gt;</code>实现下划线功能<br>注：反引号有转译功能</p><figure class="highlight plain"><figcaption><span>下划线</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;浮生六记&lt;/u&gt;好棒啊</span><br></pre></td></tr></table></figure><p><u>浮生六记</u>好棒啊</p><h2 id="2-5-脚注-amp-超链接"><a href="#2-5-脚注-amp-超链接" class="headerlink" title="2.5 脚注&amp;超链接"></a>2.5 脚注&amp;超链接</h2><p>Markdown脚注语法在hexo不兼容，此处用超链接加文字功能实现鼠标悬于上方显示想要文字。</p><figure class="highlight plain"><figcaption><span>脚注&超链接</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[^浮生六记]  </span><br><span class="line">[^浮生六记]: 老沈贼厉害！！！</span><br><span class="line"></span><br><span class="line">[浮生六记](https://www.pfchen.top &quot;老沈贼厉害！！！&quot;)</span><br></pre></td></tr></table></figure><p><a href="https://www.pfchen.top" title="老沈贼厉害！！！" target="_blank" rel="noopener">浮生六记</a></p><h1 id="3-列表"><a href="#3-列表" class="headerlink" title="3. 列表"></a>3. 列表</h1><h2 id="3-1-有序列表和无序列表"><a href="#3-1-有序列表和无序列表" class="headerlink" title="3.1 有序列表和无序列表"></a>3.1 有序列表和无序列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号<code>*</code>、加号<code>+</code>或是减号<code>-</code>作为列表标记：</p><figure class="highlight plain"><figcaption><span>无序列表</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 浮生一记</span><br><span class="line">* 浮生二记</span><br><span class="line">* 浮生三记</span><br><span class="line">+ 浮生一记</span><br><span class="line">+ 浮生二记</span><br><span class="line">+ 浮生三记</span><br><span class="line">- 浮生一记</span><br><span class="line">- 浮生二记</span><br><span class="line">- 浮生三记</span><br></pre></td></tr></table></figure><ul><li>浮生一记</li><li>浮生二记</li><li>浮生三记</li></ul><ul><li>浮生一记</li><li>浮生二记</li><li>浮生三记</li></ul><ul><li>浮生一记</li><li>浮生二记</li><li>浮生三记</li></ul><p>有序列表使用数字并加上<code>.</code>号来表示，如：</p><figure class="highlight plain"><figcaption><span>有序列表</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 浮生一记</span><br><span class="line">2. 浮生二记</span><br><span class="line">3. 浮生三记</span><br></pre></td></tr></table></figure><ol><li>浮生一记</li><li>浮生二记</li><li>浮生三记</li></ol><h2 id="3-2-列表嵌套"><a href="#3-2-列表嵌套" class="headerlink" title="3.2 列表嵌套"></a>3.2 列表嵌套</h2><p>列表嵌套只需在子列表中的选项添加四个空格即可。</p><figure class="highlight plain"><figcaption><span>列表嵌套</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 浮生一记：</span><br><span class="line">    - 一一记</span><br><span class="line">    - 一二记</span><br><span class="line">2. 浮生二记：</span><br><span class="line">    - 二一记</span><br><span class="line">    - 二二记</span><br></pre></td></tr></table></figure><ol><li>浮生一记：<ul><li>一一记</li><li>一二记</li></ul></li><li>浮生二记：<ul><li>二一记</li><li>二二记</li></ul></li></ol><h1 id="4-区块"><a href="#4-区块" class="headerlink" title="4. 区块"></a>4. 区块</h1><figure class="highlight plain"><figcaption><span>区块&列表嵌套</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt; 浮生六记：</span><br><span class="line">&gt; &gt; 卷一《闺房记乐》  </span><br><span class="line">&gt; &gt; 卷二《闲情记趣》  </span><br><span class="line">&gt; &gt; 卷三《坎坷记愁》  </span><br><span class="line">&gt; &gt; 卷四《浪游记快》  </span><br><span class="line">&gt; &gt; 卷五《中山记历》 </span><br><span class="line">&gt; &gt; * 佚失  </span><br><span class="line">   </span><br><span class="line">&gt; &gt; 卷六《养生记道》</span><br><span class="line">&gt; &gt; * 佚失</span><br></pre></td></tr></table></figure> <blockquote><p>浮生六记：</p><blockquote><p>卷一《闺房记乐》<br>卷二《闲情记趣》<br>卷三《坎坷记愁》<br>卷四《浪游记快》<br>卷五《中山记历》 </p><ul><li>佚失  </li></ul></blockquote></blockquote><blockquote><blockquote><p>卷六《养生记道》</p><ul><li>佚失</li></ul></blockquote></blockquote><h1 id="5-代码"><a href="#5-代码" class="headerlink" title="5 代码"></a>5 代码</h1><p>Markdown脚注语法在hexo不兼容，此处用超链接加文字功能实现鼠标悬于上方显示想要文字。</p><figure class="highlight plain"><figcaption><span>脚注&超链接</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`printf()` 函数</span><br></pre></td></tr></table></figure><p><code>printf()</code> 函数 </p>]]></content>
-      
-      
+      <tags>
+        <tag>哈</tag>
+        <tag>嘻</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown语法汇总-hexo]]></title>
+    <url>%2F2019%2F01%2F15%2FMarkdown%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB-hexo%2F</url>
+    <content type="text"><![CDATA[标题使用 # 号标记更方便 标题123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题 段落Markdown默认段落的换行是使用两个以上空格加上回车，hexo对此有优化，所以即使不加空格仅使用回车依旧可以实现换行功能。 2.1 字体字体1234567浮生六记 *斜体文本* _斜体文本_ **粗体文本** __粗体文本__ ***粗斜体文本*** ___粗斜体文本___ 浮生六记浮生六记浮生六记浮生六记浮生六记浮生六记浮生六记 2.2 分隔线分割线12345**** * ****** - - ----------- 2.3 删除线hexo默认前后一个波浪线即可实现删除线功能 分割线123浮生六记 ~浮生六记~ ~~浮生六记~~ 浮生六记浮生六记浮生六记 2.4 下划线可用HTML&lt;u&gt;……&lt;/u&gt;实现下划线功能注：反引号有转译功能 下划线1&lt;u&gt;浮生六记&lt;/u&gt;好棒啊 浮生六记好棒啊 2.5 脚注&amp;超链接Markdown脚注语法在hexo不兼容，此处用超链接加文字功能实现鼠标悬于上方显示想要文字。 脚注&超链接1234[^浮生六记] [^浮生六记]: 老沈贼厉害！！！[浮生六记](https://www.pfchen.top &quot;老沈贼厉害！！！&quot;) 浮生六记 列表3.1 有序列表和无序列表Markdown 支持有序列表和无序列表。无序列表使用星号*、加号+或是减号-作为列表标记： 无序列表123456789* 浮生一记* 浮生二记* 浮生三记+ 浮生一记+ 浮生二记+ 浮生三记- 浮生一记- 浮生二记- 浮生三记 浮生一记 浮生二记 浮生三记 浮生一记 浮生二记 浮生三记 浮生一记 浮生二记 浮生三记 有序列表使用数字并加上.号来表示，如： 有序列表1231. 浮生一记2. 浮生二记3. 浮生三记 浮生一记 浮生二记 浮生三记 3.2 列表嵌套列表嵌套只需在子列表中的选项添加四个空格即可。 列表嵌套1234561. 浮生一记： - 一一记 - 一二记2. 浮生二记： - 二一记 - 二二记 浮生一记： 一一记 一二记 浮生二记： 二一记 二二记 区块区块&列表嵌套12345678910&gt; 浮生六记：&gt; &gt; 卷一《闺房记乐》 &gt; &gt; 卷二《闲情记趣》 &gt; &gt; 卷三《坎坷记愁》 &gt; &gt; 卷四《浪游记快》 &gt; &gt; 卷五《中山记历》 &gt; &gt; * 佚失 &gt; &gt; 卷六《养生记道》&gt; &gt; * 佚失 浮生六记： 卷一《闺房记乐》卷二《闲情记趣》卷三《坎坷记愁》卷四《浪游记快》卷五《中山记历》 佚失 卷六《养生记道》 佚失 代码Markdown脚注语法在hexo不兼容，此处用超链接加文字功能实现鼠标悬于上方显示想要文字。 脚注&超链接1`printf()` 函数 printf() 函数]]></content>
       <categories>
-          
-          <category> 基础语言 </category>
-          
+        <category>Markdown语法汇总-hexo</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
 </search>
