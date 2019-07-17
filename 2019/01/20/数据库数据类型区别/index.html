@@ -87,18 +87,18 @@
 
 
 
-  <meta name="description" content="日常、数据库、爬虫、机器学习、深度学习等">
-<meta name="keywords" content="数据库-数据类型,SQL,mysql,hive,spark,flink,Oracle">
+  <meta name="description" content="&amp;ensp; &amp;ensp; 写在前面：目前流行数据库数据类型差别不大，但因为存在的细微差异，在工作中带来很多不便，以至于 debug 很久才发现是建表时字段类型错误导致。所以，跨数据库调度建表时一定要多多留心。注：以 SQL、MySQL、Hive为主。 SQLCharacter 字符串    数据类型 描述     char(n) 固定长度的字符串。最多 8,000 个字符。   varchar(">
+<meta name="keywords" content="数据库-数据类型,SQL,mysql,hive">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库数据类型区别">
 <meta property="og:url" content="http://pfchen.top/2019/01/20/数据库数据类型区别/index.html">
 <meta property="og:site_name" content="浮 · 生">
-<meta property="og:description" content="日常、数据库、爬虫、机器学习、深度学习等">
+<meta property="og:description" content="&amp;ensp; &amp;ensp; 写在前面：目前流行数据库数据类型差别不大，但因为存在的细微差异，在工作中带来很多不便，以至于 debug 很久才发现是建表时字段类型错误导致。所以，跨数据库调度建表时一定要多多留心。注：以 SQL、MySQL、Hive为主。 SQLCharacter 字符串    数据类型 描述     char(n) 固定长度的字符串。最多 8,000 个字符。   varchar(">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-17T02:57:26.888Z">
+<meta property="og:updated_time" content="2019-07-17T09:00:05.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库数据类型区别">
-<meta name="twitter:description" content="日常、数据库、爬虫、机器学习、深度学习等">
+<meta name="twitter:description" content="&amp;ensp; &amp;ensp; 写在前面：目前流行数据库数据类型差别不大，但因为存在的细微差异，在工作中带来很多不便，以至于 debug 很久才发现是建表时字段类型错误导致。所以，跨数据库调度建表时一定要多多留心。注：以 SQL、MySQL、Hive为主。 SQLCharacter 字符串    数据类型 描述     char(n) 固定长度的字符串。最多 8,000 个字符。   varchar(">
 
 
 
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-17 10:57:26" itemprop="dateModified" datetime="2019-07-17T10:57:26+08:00">2019-07-17</time>
+                <time title="修改时间：2019-07-17 17:00:05" itemprop="dateModified" datetime="2019-07-17T17:00:05+08:00">2019-07-17</time>
               </span>
             
           
@@ -484,7 +484,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">0</span>
+              <span title="本文字数">6.5k</span>
             </span>
           
 
@@ -496,7 +496,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span title="阅读时长">6 分钟</span>
             </span>
           
 
@@ -515,7 +515,752 @@
       
 
       
-        
+        <p>&ensp; &ensp; <strong>写在前面：</strong>目前流行数据库数据类型差别不大，但因为存在的细微差异，在工作中带来很多不便，以至于 debug 很久才发现是建表时字段类型错误导致。所以，跨数据库调度建表时一定要多多留心。注：以 SQL、MySQL、Hive为主。</p>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="Character-字符串"><a href="#Character-字符串" class="headerlink" title="Character 字符串"></a>Character 字符串</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">char(n)</td>
+<td style="text-align:left">固定长度的字符串。最多 8,000 个字符。</td>
+</tr>
+<tr>
+<td style="text-align:left">varchar(n)</td>
+<td style="text-align:left">可变长度的字符串。最多 8,000 个字符。</td>
+</tr>
+<tr>
+<td style="text-align:left">varchar(max)</td>
+<td style="text-align:left">可变长度的字符串。最多 1,073,741,824 个字符。</td>
+</tr>
+<tr>
+<td style="text-align:left">text</td>
+<td style="text-align:left">可变长度的字符串。最多 2GB 字符数据。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Unicode-字符串"><a href="#Unicode-字符串" class="headerlink" title="Unicode 字符串"></a>Unicode 字符串</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">nchar(n)</td>
+<td style="text-align:left">固定长度的 Unicode 数据。最多 4,000 个字符。     </td>
+</tr>
+<tr>
+<td style="text-align:left">nvarchar(n)</td>
+<td style="text-align:left">可变长度的 Unicode 数据。最多 4,000 个字符。     </td>
+</tr>
+<tr>
+<td style="text-align:left">nvarchar(max)</td>
+<td style="text-align:left">可变长度的 Unicode 数据。最多 536,870,912 个字符。     </td>
+</tr>
+<tr>
+<td style="text-align:left">ntext</td>
+<td style="text-align:left">可变长度的 Unicode 数据。最多 2GB 字符数据。     </td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Binary-类型"><a href="#Binary-类型" class="headerlink" title="Binary 类型"></a>Binary 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">bit</td>
+<td style="text-align:left">允许 0、1 或 NULL     </td>
+</tr>
+<tr>
+<td style="text-align:left">binary(n)</td>
+<td style="text-align:left">固定长度的二进制数据。最多 8,000 字节。     </td>
+</tr>
+<tr>
+<td style="text-align:left">varbinary(n)</td>
+<td style="text-align:left">可变长度的二进制数据。最多 8,000 字节。     </td>
+</tr>
+<tr>
+<td style="text-align:left">varbinary(max)</td>
+<td style="text-align:left">可变长度的二进制数据。最多 2GB 字节。     </td>
+</tr>
+<tr>
+<td style="text-align:left">image</td>
+<td style="text-align:left">可变长度的二进制数据。最多 2GB。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Number-类型"><a href="#Number-类型" class="headerlink" title="Number 类型"></a>Number 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">tinyint</td>
+<td style="text-align:left">允许从 0 到 255 的所有数字。</td>
+</tr>
+<tr>
+<td style="text-align:left">smallint</td>
+<td style="text-align:left">允许从 -32,768 到 32,767 的所有数字。</td>
+</tr>
+<tr>
+<td style="text-align:left">int</td>
+<td style="text-align:left">允许从 -2,147,483,648 到 2,147,483,647 的所有数字。</td>
+</tr>
+<tr>
+<td style="text-align:left">bigint</td>
+<td style="text-align:left">允许介于 -9,223,372,036,854,775,808 和 9,223,372,036,854,775,807 之间的所有数字。</td>
+</tr>
+<tr>
+<td style="text-align:left">decimal(p,s)</td>
+<td style="text-align:left">固定精度和比例的数字。允许从 -10^38 +1 到 10^38 -1 之间的数字。<br>p 参数指示可以存储的最大位数（小数点左侧和右侧）。p 必须是 1 到 38 之间的值。默认是 18。<br>s 参数指示小数点右侧存储的最大位数。s 必须是 0 到 p 之间的值。默认是 0。</td>
+</tr>
+<tr>
+<td style="text-align:left">numeric(p,s)</td>
+<td style="text-align:left">固定精度和比例的数字。允许从 -10^38 +1 到 10^38 -1 之间的数字。<br>p 参数指示可以存储的最大位数（小数点左侧和右侧）。p 必须是 1 到 38 之间的值。默认是 18。<br>s 参数指示小数点右侧存储的最大位数。s 必须是 0 到 p 之间的值。默认是 0。</td>
+</tr>
+<tr>
+<td style="text-align:left">smallmoney</td>
+<td style="text-align:left">介于 -214,748.3648 和 214,748.3647 之间的货币数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">money</td>
+<td style="text-align:left">介于 -922,337,203,685,477.5808 和 922,337,203,685,477.5807 之间的货币数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">float(n)</td>
+<td style="text-align:left">从 -1.79E + 308 到 1.79E + 308 的浮动精度数字数据。 <br>参数 n 指示该字段保存 4 字节还是 8 字节。<br>float(24) 保存 4 字节，而 float(53) 保存 8 字节。n 的默认值是 53。</td>
+</tr>
+<tr>
+<td style="text-align:left">real</td>
+<td style="text-align:left">从 -3.40E + 38 到 3.40E + 38 的浮动精度数字数据。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Date-类型"><a href="#Date-类型" class="headerlink" title="Date 类型"></a>Date 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">datetime</td>
+<td style="text-align:left">从 1753 年 1 月 1 日 到 9999 年 12 月 31 日，精度为 3.33 毫秒。</td>
+</tr>
+<tr>
+<td style="text-align:left">datetime2</td>
+<td style="text-align:left">从 1753 年 1 月 1 日 到 9999 年 12 月 31 日，精度为 100 纳秒。</td>
+</tr>
+<tr>
+<td style="text-align:left">smalldatetime</td>
+<td style="text-align:left">从 1900 年 1 月 1 日 到 2079 年 6 月 6 日，精度为 1 分钟。</td>
+</tr>
+<tr>
+<td style="text-align:left">date</td>
+<td style="text-align:left">仅存储日期。从 0001 年 1 月 1 日 到 9999 年 12 月 31 日。</td>
+</tr>
+<tr>
+<td style="text-align:left">time</td>
+<td style="text-align:left">仅存储时间。精度为 100 纳秒。    3-5 bytes</td>
+</tr>
+<tr>
+<td style="text-align:left">datetimeoffset</td>
+<td style="text-align:left">与 datetime2 相同，外加时区偏移。</td>
+</tr>
+<tr>
+<td style="text-align:left">timestamp</td>
+<td style="text-align:left">存储唯一的数字，每当创建或修改某行时，该数字会更新。timestamp 基于内部时钟，不对应真实时间。每个表只能有一个 timestamp 变量。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="其他数据类型"><a href="#其他数据类型" class="headerlink" title="其他数据类型"></a>其他数据类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">sql_variant</td>
+<td style="text-align:left">存储最多 8,000 字节不同数据类型的数据，除了 text、ntext 以及 timestamp。</td>
+</tr>
+<tr>
+<td style="text-align:left">uniqueidentifier</td>
+<td style="text-align:left">存储全局标识符 (GUID)。</td>
+</tr>
+<tr>
+<td style="text-align:left">xml</td>
+<td style="text-align:left">存储 XML 格式化数据。最多 2GB。</td>
+</tr>
+<tr>
+<td style="text-align:left">cursor</td>
+<td style="text-align:left">存储对用于数据库操作的指针的引用。</td>
+</tr>
+<tr>
+<td style="text-align:left">table</td>
+<td style="text-align:left">存储结果集，供稍后处理。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="Text-类型"><a href="#Text-类型" class="headerlink" title="Text 类型"></a>Text 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CHAR(size)</td>
+<td style="text-align:left">保存固定长度的字符串（可包含字母、数字以及特殊字符）。在括号中指定字符串的长度。最多 255 个字符。</td>
+</tr>
+<tr>
+<td style="text-align:left">VARCHAR(size)</td>
+<td style="text-align:left">保存可变长度的字符串（可包含字母、数字以及特殊字符）。在括号中指定字符串的最大长度。最多 255 个字符。<br>注释：如果值的长度大于 255，则被转换为 TEXT 类型。</td>
+</tr>
+<tr>
+<td style="text-align:left">TINYTEXT</td>
+<td style="text-align:left">存放最大长度为 255 个字符的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:left">TEXT</td>
+<td style="text-align:left">存放最大长度为 65,535 个字符的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:left">BLOB</td>
+<td style="text-align:left">用于 BLOBs (Binary Large OBjects)。存放最多 65,535 字节的数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">MEDIUMTEXT</td>
+<td style="text-align:left">存放最大长度为 16,777,215 个字符的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:left">MEDIUMBLOB</td>
+<td style="text-align:left">用于 BLOBs (Binary Large OBjects)。存放最多 16,777,215 字节的数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">LONGTEXT</td>
+<td style="text-align:left">存放最大长度为 4,294,967,295 个字符的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:left">LONGBLOB</td>
+<td style="text-align:left">用于 BLOBs (Binary Large OBjects)。存放最多 4,294,967,295 字节的数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">ENUM(x,y,z,etc.)</td>
+<td style="text-align:left">允许你输入可能值的列表。可以在 ENUM 列表中列出最大 65535 个值。如果列表中不存在插入的值，则插入空值。<br>注释：这些值是按照你输入的顺序存储的。可以按照此格式输入可能的值：ENUM(‘X’,’Y’,’Z’)</td>
+</tr>
+<tr>
+<td style="text-align:left">SET</td>
+<td style="text-align:left">与 ENUM 类似，SET 最多只能包含 64 个列表项，不过 SET 可存储一个以上的值。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Number-类型-1"><a href="#Number-类型-1" class="headerlink" title="Number 类型"></a>Number 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TINYINT(size)</td>
+<td style="text-align:left">-128 到 127 常规。0 到 255 无符号*。在括号中规定最大位数。</td>
+</tr>
+<tr>
+<td style="text-align:left">SMALLINT(size)</td>
+<td style="text-align:left">-32768 到 32767 常规。0 到 65535 无符号*。在括号中规定最大位数。</td>
+</tr>
+<tr>
+<td style="text-align:left">MEDIUMINT(size)</td>
+<td style="text-align:left">-8388608 到 8388607 普通。0 to 16777215 无符号*。在括号中规定最大位数。</td>
+</tr>
+<tr>
+<td style="text-align:left">INT(size)</td>
+<td style="text-align:left">-2147483648 到 2147483647 常规。0 到 4294967295 无符号*。在括号中规定最大位数。</td>
+</tr>
+<tr>
+<td style="text-align:left">BIGINT(size)</td>
+<td style="text-align:left">-9223372036854775808 到 9223372036854775807 常规。0 到 18446744073709551615 无符号*。在括号中规定最大位数。</td>
+</tr>
+<tr>
+<td style="text-align:left">FLOAT(size,d)</td>
+<td style="text-align:left">带有浮动小数点的小数字。在括号中规定最大位数。在 d 参数中规定小数点右侧的最大位数。</td>
+</tr>
+<tr>
+<td style="text-align:left">DOUBLE(size,d)</td>
+<td style="text-align:left">带有浮动小数点的大数字。在括号中规定最大位数。在 d 参数中规定小数点右侧的最大位数。</td>
+</tr>
+<tr>
+<td style="text-align:left">DECIMAL(size,d)</td>
+<td style="text-align:left">作为字符串存储的 DOUBLE 类型，允许固定的小数点。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* 这些整数类型拥有额外的选项 UNSIGNED。通常，整数可以是负数或正数。如果添加 UNSIGNED 属性，那么范围将从 0 开始，而不是某个负数。</p>
+<h2 id="Date-类型-1"><a href="#Date-类型-1" class="headerlink" title="Date 类型"></a>Date 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DATE()</td>
+<td style="text-align:left">日期。格式：YYYY-MM-DD <br>注释：支持的范围是从 ‘1000-01-01’ 到 ‘9999-12-31’</td>
+</tr>
+<tr>
+<td style="text-align:left">DATETIME()</td>
+<td style="text-align:left">*日期和时间的组合。格式：YYYY-MM-DD HH:MM:SS <br>注释：支持的范围是从 ‘1000-01-01 00:00:00’ 到 ‘9999-12-31 23:59:59’</td>
+</tr>
+<tr>
+<td style="text-align:left">TIMESTAMP()</td>
+<td style="text-align:left">*时间戳。TIMESTAMP 值使用 Unix 纪元(‘1970-01-01 00:00:00’ UTC) 至今的描述来存储。格式：YYYY-MM-DD HH:MM:SS <br>注释：支持的范围是从 ‘1970-01-01 00:00:01’ UTC 到 ‘2038-01-09 03:14:07’ UTC</td>
+</tr>
+<tr>
+<td style="text-align:left">TIME()</td>
+<td style="text-align:left">时间。格式：HH:MM:SS <br>注释：支持的范围是从 ‘-838:59:59’ 到 ‘838:59:59’</td>
+</tr>
+<tr>
+<td style="text-align:left">YEAR()</td>
+<td style="text-align:left">2 位或 4 位格式的年。<br>注释：4 位格式所允许的值：1901 到 2155。2 位格式所允许的值：70 到 69，表示从 1970 到 2069。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h1><h2 id="Number-类型-2"><a href="#Number-类型-2" class="headerlink" title="Number 类型"></a>Number 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TINYINT</td>
+<td style="text-align:left">1字节</td>
+<td style="text-align:left">有符号整型</td>
+</tr>
+<tr>
+<td style="text-align:left">SMALLINT</td>
+<td style="text-align:left">2字节</td>
+<td style="text-align:left">有符号整型</td>
+</tr>
+<tr>
+<td style="text-align:left">INT</td>
+<td style="text-align:left">4字节</td>
+<td style="text-align:left">有符号整型</td>
+</tr>
+<tr>
+<td style="text-align:left">BIGINT</td>
+<td style="text-align:left">8字节</td>
+<td style="text-align:left">有符号整型</td>
+</tr>
+<tr>
+<td style="text-align:left">FLOAT</td>
+<td style="text-align:left">4字节</td>
+<td style="text-align:left">有符号单精度浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">DOUBLE</td>
+<td style="text-align:left">8字节</td>
+<td style="text-align:left">有符号双精度浮点数</td>
+</tr>
+<tr>
+<td style="text-align:left">DECIMAL</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">可带小数的精确数字字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Date-类型-2"><a href="#Date-类型-2" class="headerlink" title="Date 类型"></a>Date 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TIMESTAMP</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">时间戳，内容格式：yyyy-mm-dd hh:mm:ss[.f…]</td>
+</tr>
+<tr>
+<td style="text-align:left">DATE</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">日期，内容格式：YYYY­MM­DD</td>
+</tr>
+<tr>
+<td style="text-align:left">INTERVAL</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">间隔时间</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="String-类型"><a href="#String-类型" class="headerlink" title="String 类型"></a>String 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">STRING</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">VARCHAR</td>
+<td style="text-align:left">字符数范围1 - 65535</td>
+<td style="text-align:left">长度不定字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">CHAR</td>
+<td style="text-align:left">最大的字符数：255</td>
+<td style="text-align:left">长度固定字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Misc-类型"><a href="#Misc-类型" class="headerlink" title="Misc 类型"></a>Misc 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">BOOLEAN</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">布尔类型 TRUE/FALSE</td>
+</tr>
+<tr>
+<td style="text-align:left">BINARY</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">字节序列</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="复合类"><a href="#复合类" class="headerlink" title="复合类"></a>复合类</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">长度</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ARRAY</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">包含同类型元素的数组，索引从0开始 ARRAY</td>
+</tr>
+<tr>
+<td style="text-align:left">MAP</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">字典 <code>MAP&lt;primitive_type, data_type&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">STRUCT</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">结构体 <code>STRUCT&lt;col_name : data_type [COMMENT col_comment], ...&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">UNIONTYPE</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">联合体 <code>UNIONTYPE&lt;data_type, data_type, ...&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="Oracle"><a href="#Oracle" class="headerlink" title="Oracle"></a>Oracle</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段类型</th>
+<th style="text-align:left">中文说明</th>
+<th style="text-align:left">限制条件</th>
+<th style="text-align:left">其它说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CHAR</td>
+<td style="text-align:left">固定长度字符串</td>
+<td style="text-align:left">最大长度2000 bytes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">VARCHAR2</td>
+<td style="text-align:left">可变长度的字符串</td>
+<td style="text-align:left">最大长度4000 bytes</td>
+<td style="text-align:left">可做索引的最大长度749</td>
+</tr>
+<tr>
+<td style="text-align:left">NCHAR</td>
+<td style="text-align:left">根据字符集而定的固定长度字符串</td>
+<td style="text-align:left">最大长度2000 bytes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">NVARCHAR2</td>
+<td style="text-align:left">根据字符集而定的可变长度字符串</td>
+<td style="text-align:left">最大长度4000 bytes</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">DATE</td>
+<td style="text-align:left">日期（日-月-年）</td>
+<td style="text-align:left">DD-MM-YY（HH-MI-SS）</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">LONG</td>
+<td style="text-align:left">超长字符串</td>
+<td style="text-align:left">最大长度2G（231-1）    足够存储大部头著作</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">RAW</td>
+<td style="text-align:left">固定长度的二进制数据</td>
+<td style="text-align:left">最大长度2000 bytes</td>
+<td style="text-align:left">可存放多媒体图象声音等</td>
+</tr>
+<tr>
+<td style="text-align:left">LONG RAW</td>
+<td style="text-align:left">可变长度的二进制数据</td>
+<td style="text-align:left">最大长度2G</td>
+<td style="text-align:left">同上    </td>
+</tr>
+<tr>
+<td style="text-align:left">BLOB</td>
+<td style="text-align:left">二进制数据</td>
+<td style="text-align:left">最大长度4G</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">CLOB</td>
+<td style="text-align:left">字符数据</td>
+<td style="text-align:left">最大长度4G</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">NCLOB</td>
+<td style="text-align:left">根据字符集而定的字符数据</td>
+<td style="text-align:left">最大长度4G</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">BFILE</td>
+<td style="text-align:left">存放在数据库外的二进制数据</td>
+<td style="text-align:left">最大长度4G</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">ROWID</td>
+<td style="text-align:left">数据表中记录的唯一行号</td>
+<td style="text-align:left">10 bytes</td>
+<td style="text-align:left">********.****.****格式，*为0或1</td>
+</tr>
+<tr>
+<td style="text-align:left">NROWID</td>
+<td style="text-align:left">二进制数据表中记录的唯一行号</td>
+<td style="text-align:left">最大长度4000 bytes    </td>
+</tr>
+<tr>
+<td style="text-align:left">NUMBER(P,S)</td>
+<td style="text-align:left">数字类型</td>
+<td style="text-align:left">P为总位数，S为小数位数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">DECIMAL(P,S)</td>
+<td style="text-align:left">数字类型</td>
+<td style="text-align:left">P为总位数，S为小数位数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">INTEGER</td>
+<td style="text-align:left">整数类型</td>
+<td style="text-align:left">小的整数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">FLOAT</td>
+<td style="text-align:left">浮点数类型</td>
+<td style="text-align:left">NUMBER(38)，双精度</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">REAL</td>
+<td style="text-align:left">实数类型</td>
+<td style="text-align:left">NUMBER(63)，精度更高</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="SparkSQL"><a href="#SparkSQL" class="headerlink" title="SparkSQL"></a>SparkSQL</h1><h2 id="Number-类型-3"><a href="#Number-类型-3" class="headerlink" title="Number 类型"></a>Number 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ByteType</td>
+<td style="text-align:left">代表一个字节的整数。</td>
+<td style="text-align:left">范围是-128到127</td>
+</tr>
+<tr>
+<td style="text-align:left">ShortType</td>
+<td style="text-align:left">代表两个字节的整数。</td>
+<td style="text-align:left">范围是-32768到32767</td>
+</tr>
+<tr>
+<td style="text-align:left">IntegerType</td>
+<td style="text-align:left">代表4个字节的整数。</td>
+<td style="text-align:left">范围是-2147483648到2147483647</td>
+</tr>
+<tr>
+<td style="text-align:left">LongType</td>
+<td style="text-align:left">代表8个字节的整数。</td>
+<td style="text-align:left">范围是-9223372036854775808到9223372036854775807</td>
+</tr>
+<tr>
+<td style="text-align:left">FloatType</td>
+<td style="text-align:left">代表4字节的单精度浮点数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">DoubleType</td>
+<td style="text-align:left">代表8字节的双精度浮点数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">DecimalType</td>
+<td style="text-align:left">代表任意精度的10进制数据。</td>
+<td style="text-align:left">通过内部的java.math.BigDecimal支持。<br>BigDecimal由一个任意精度的整型非标度值和一个32位整数组成。</td>
+</tr>
+<tr>
+<td style="text-align:left">StringType</td>
+<td style="text-align:left">代表一个字符串值</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">BinaryType</td>
+<td style="text-align:left">代表一个byte序列值</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">BooleanType</td>
+<td style="text-align:left">代表boolean值</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Date-类型-3"><a href="#Date-类型-3" class="headerlink" title="Date 类型"></a>Date 类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">说明    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TimestampType</td>
+<td style="text-align:left">代表包含字段年，月，日，时，分，秒的值</td>
+</tr>
+<tr>
+<td style="text-align:left">DateType</td>
+<td style="text-align:left">代表包含字段年，月，日的值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="复杂类型"><a href="#复杂类型" class="headerlink" title="复杂类型"></a>复杂类型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ArrayType(elementType, containsNull)</td>
+<td style="text-align:left">代表由elementType类型元素组成的序列值。containsNull用来指明ArrayType中的值是否有null值。</td>
+</tr>
+<tr>
+<td style="text-align:left">MapType(keyType, valueType, valueContainsNull)</td>
+<td style="text-align:left">表示包括一组键 - 值对的值。通过keyType表示key数据的类型，通过valueType表示value数据的类型。<br>valueContainsNull用来指明MapType中的值是否有null值。</td>
+</tr>
+<tr>
+<td style="text-align:left">StructType(fields)</td>
+<td style="text-align:left">表示一个拥有StructFields (fields)序列结构的值。 </td>
+</tr>
+<tr>
+<td style="text-align:left">StructField(name, dataType, nullable)</td>
+<td style="text-align:left">代表StructType中的一个字段，字段的名字通过name指定，dataType指定field的数据类型，nullable表示字段的值是否有null值。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br><br><strong>参考来源：</strong><br><a href="http://www.w3school.com.cn/sql/sql_datatypes.asp" target="_blank" rel="noopener">SQL MySQL数据类型</a><br><a href="https://blog.csdn.net/thomson617/article/details/87792545" target="_blank" rel="noopener">Oracle数据类型</a><br><a href="https://blog.csdn.net/maizi1045/article/details/79710406" target="_blank" rel="noopener">Hive数据类型</a><br><a href="https://docs.microsoft.com/zh-cn/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017" target="_blank" rel="noopener">SQL官方手册</a><br><a href="https://dev.mysql.com/doc/refman/8.0/en/programs.html" target="_blank" rel="noopener">MySQL官方手册</a><br><a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Types#LanguageManualTypes-Intervals" target="_blank" rel="noopener">Hive官方手册</a><br><a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/SELECT.html#GUID-CFA006CA-6FF1-4972-821E-6996142A51C6" target="_blank" rel="noopener">Oracle官方手册</a><br><a href="http://spark.apache.org/docs/latest/sql-getting-started.html" target="_blank" rel="noopener">Spark官方手册</a><br><a href="https://ci.apache.org/projects/flink/flink-docs-release-1.7/" target="_blank" rel="noopener">Flink官方手册</a></p>
+
       
     </div>
 
@@ -552,12 +1297,6 @@
             <a href="/tags/mysql/" rel="tag"># mysql</a>
           
             <a href="/tags/hive/" rel="tag"># hive</a>
-          
-            <a href="/tags/spark/" rel="tag"># spark</a>
-          
-            <a href="/tags/flink/" rel="tag"># flink</a>
-          
-            <a href="/tags/Oracle/" rel="tag"># Oracle</a>
           
         </div>
       
@@ -622,8 +1361,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -688,13 +1436,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -765,6 +1507,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL"><span class="nav-text">SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Character-字符串"><span class="nav-text">Character 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unicode-字符串"><span class="nav-text">Unicode 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-类型"><span class="nav-text">Binary 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Number-类型"><span class="nav-text">Number 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-类型"><span class="nav-text">Date 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他数据类型"><span class="nav-text">其他数据类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL"><span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Text-类型"><span class="nav-text">Text 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Number-类型-1"><span class="nav-text">Number 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-类型-1"><span class="nav-text">Date 类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hive"><span class="nav-text">Hive</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Number-类型-2"><span class="nav-text">Number 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-类型-2"><span class="nav-text">Date 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-类型"><span class="nav-text">String 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Misc-类型"><span class="nav-text">Misc 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合类"><span class="nav-text">复合类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle"><span class="nav-text">Oracle</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SparkSQL"><span class="nav-text">SparkSQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Number-类型-3"><span class="nav-text">Number 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-类型-3"><span class="nav-text">Date 类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂类型"><span class="nav-text">复杂类型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
