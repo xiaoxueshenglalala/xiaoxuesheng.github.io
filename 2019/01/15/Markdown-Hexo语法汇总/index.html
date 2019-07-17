@@ -99,7 +99,8 @@
 <meta property="og:image" content="http://pfchen.top/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg">
 <meta property="og:image" content="http://pfchen.top/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg">
 <meta property="og:image" content="http://pfchen.top/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg">
-<meta property="og:updated_time" content="2019-07-16T14:43:13.593Z">
+<meta property="og:image" content="http://pfchen.top/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg">
+<meta property="og:updated_time" content="2019-07-17T00:57:03.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown-Hexo语法汇总">
 <meta name="twitter:description" content="1.标题使用#或-标记标题123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题 2.段落Markdown默认段落的换行是使用两个以上空格加上回车，hexo对此有优化，所以即使不加空格仅使用回车依旧可以实现换行功能。首行缩进&amp;amp;ensp; //相当于1个中文，2字节 2.1字体字体1234浮生六记  *斜体文本*   **粗体文本*">
@@ -438,7 +439,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-16 22:43:13" itemprop="dateModified" datetime="2019-07-16T22:43:13+08:00">2019-07-16</time>
+                <time title="修改时间：2019-07-17 08:57:03" itemprop="dateModified" datetime="2019-07-17T08:57:03+08:00">2019-07-17</time>
               </span>
             
           
@@ -489,7 +490,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">3.8k</span>
+              <span title="本文字数">4k</span>
             </span>
           
 
@@ -501,7 +502,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">3 分钟</span>
+              <span title="阅读时长">4 分钟</span>
             </span>
           
 
@@ -580,7 +581,8 @@
 </ul>
 </blockquote>
 </blockquote>
-<h1 id="5-代码"><a href="#5-代码" class="headerlink" title="5.代码"></a>5.代码</h1><p>Markdown脚注语法在hexo不兼容，此处用超链接加文字功能实现鼠标悬于上方显示想要文字。<br><figure class="highlight plain"><figcaption><span>函数&代码片段</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`printf()` 函数</span><br></pre></td></tr></table></figure><br><code>printf()</code> 函数 </p>
+<h1 id="5-代码"><a href="#5-代码" class="headerlink" title="5.代码"></a>5.代码</h1><figure class="highlight plain"><figcaption><span>函数&代码片段</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`printf()` 函数</span><br></pre></td></tr></table></figure>
+<p><code>printf()</code> 函数 </p>
 <p>Hexo-Text如下方式打印代码区块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock 代码区块 lang:语言名称 %&#125;</span><br><span class="line"> $(document).ready(function () &#123;</span><br><span class="line">     alert(&apos;RUNOOB&apos;);</span><br><span class="line"> &#125;);</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><figcaption><span>代码区块</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'RUNOOB'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>Markdown用如下方式打印代码区块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```javascript 语言名称(代码标颜色)</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&apos;RUNOOB&apos;);</span><br><span class="line">&#125;);</span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
@@ -591,8 +593,8 @@
 <p>链接也可以用变量来代替，文档末尾附带变量地址：<br>这个链接用 1 作为网址变量 <a href="http://www.google.com/" target="_blank" rel="noopener">Google</a><br>这个链接用 runoob 作为网址变量 <a href="http://www.runoob.com/" target="_blank" rel="noopener">Runoob</a><br>然后在文档的结尾为变量赋值（网址）</p>
 <h1 id="7-图片"><a href="#7-图片" class="headerlink" title="7.图片"></a>7.图片</h1><figure class="highlight plain"><figcaption><span>图片</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![](Markdown-Hexo语法汇总/maomi.jpeg)</span><br><span class="line">![头像](Markdown-Hexo语法汇总/maomi.jpeg &quot;头像素材&quot;)</span><br></pre></td></tr></table></figure>
 <p><img src="/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg" alt="随意"> <img src="/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg" alt="头像" title="头像素材"></p>
-<figure class="highlight plain"><figcaption><span>图片调整</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;Markdown-Hexo语法汇总/maomi.jpeg&quot; width=&quot;10%&quot; height=&quot;10%&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg" width="10%" height="10%"></p>
+<figure class="highlight plain"><figcaption><span>图片调整</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;Markdown语法汇总-hexo/maomi.jpeg&quot; width=&quot;10%&quot;; height=&quot;10%&quot;; style=&quot; margin-top:5px; margin-left:100px&quot;&gt;</span><br><span class="line">&lt;img src=&quot;Markdown语法汇总-hexo/maomi.jpeg&quot; width=&quot;10%&quot;; height=&quot;10%&quot;; style=&quot;position:absolute; margin-top:-160px; margin-left:300px&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg" width="10%" ; height="10%" style=" margin-top:5px; margin-left:100px"><br><img src="/2019/01/15/Markdown-Hexo语法汇总/maomi.jpeg" width="10%" ; height="10%" style="position:absolute; margin-top:-160px; margin-left:300px"></p>
 <h1 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h1><figure class="highlight plain"><figcaption><span>表格</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
 <div class="table-container">
 <table>
