@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[linux-Centos7安装及问题]]></title>
     <url>%2F2019%2F03%2F18%2Flinux-Centos7%E5%AE%89%E8%A3%85%E5%8F%8A%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[&ensp; &ensp; 写在前面：Centos7 U盘安装、虚拟安装及部署所遇问题。U盘安装直接IOS写入即可，避免FAT32大小问题。VMware安装Centos7超详细过程（图文） https://blog.csdn.net/babyxue/article/details/80970526https://blog.csdn.net/u013168176/article/details/81144193将个人笔记本改造成Linux简易服务器 https://www.jianshu.com/p/7dc15bc448c7]]></content>
+    <content type="text"><![CDATA[&ensp; &ensp; 写在前面：Centos7 U盘安装、虚拟安装及部署所遇问题。U盘安装直接IOS写入即可，避免FAT32大小问题。如果安装顺利，恭喜直接享用；如果不幸重启各种故障，不要各种百度，也不用求Google，根据我的经验，最好的方式是重装，根据下方教程耐心尝试几次，虚拟安装和多系统、或单系统安装过程没区别。U盘安装可能会遇到之前写入镜像文件的U盘插入其它电脑无法使用现象，不用担心，这里最直接的方法是下载老毛桃之类软件，强制初始化U盘就OK。VMware安装Centos7超详细过程（图文） https://blog.csdn.net/babyxue/article/details/80970526https://blog.csdn.net/u013168176/article/details/81144193将个人笔记本改造成Linux简易服务器 https://www.jianshu.com/p/7dc15bc448c7]]></content>
       <categories>
         <category>linux</category>
         <category>服务器</category>
@@ -16,7 +16,7 @@
   <entry>
     <title><![CDATA[superset安装部署及echarts接入]]></title>
     <url>%2F2019%2F01%2F23%2Fsuperset%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%8F%8Aecharts%E6%8E%A5%E5%85%A5%2F</url>
-    <content type="text"><![CDATA[&ensp; &ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。superset官方手册 http://superset.apache.org/tutorial.htmlSuperset的安装配置及基础使用手册 https://blog.csdn.net/folecld123/article/details/80705616Superset在Winodw安装以及问题整理 https://www.cnblogs.com/Jonecmnn/p/7417498.htmluperset集成kylin2.5.0 https://www.liangzl.com/get-article-detail-34757.htmlSuperset二次开发（全面） https://blog.csdn.net/oASiDuoFu/article/details/80525651Superset集成Echarts并调整数据接口-更新0.28.1 https://zhuanlan.zhihu.com/p/46992404接上新版本补充 https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/superset接入可视化echarts图表（Python2、superset0.28以前） https://juejin.im/post/5cde1210f265da03b8587776superset的安装以及和echart整合（superset0.28以前） https://blog.csdn.net/lzlnd/article/details/85167270superset云部署 https://www.jianshu.com/p/9ad7e29792ddnginx+gunicorn+upstart方式部署 https://www.jianshu.com/p/28b42f27744a]]></content>
+    <content type="text"><![CDATA[&ensp; &ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在/assets/下执行npm run dev（注：这里可能会报错，根据错误百度修改），再次重登superset就可以了。推荐-superset官方手册 http://superset.apache.org/tutorial.htmlSuperset的安装配置及基础使用手册 https://blog.csdn.net/folecld123/article/details/80705616Superset在Winodw安装以及问题整理 https://www.cnblogs.com/Jonecmnn/p/7417498.htmluperset集成kylin2.5.0 https://www.liangzl.com/get-article-detail-34757.html推荐-Superset二次开发（全面） https://blog.csdn.net/oASiDuoFu/article/details/80525651推荐-Superset集成Echarts并调整数据接口-更新0.28.1 https://zhuanlan.zhihu.com/p/46992404接上新版本补充 https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/superset接入可视化echarts图表（Python2、superset0.28以前） https://juejin.im/post/5cde1210f265da03b8587776superset的安装以及和echart整合（superset0.28以前） https://blog.csdn.net/lzlnd/article/details/85167270superset云部署 https://www.jianshu.com/p/9ad7e29792ddnginx+gunicorn+upstart方式部署 https://www.jianshu.com/p/28b42f27744a推荐-用Gunicorn部署Superset https://zhuanlan.zhihu.com/p/59321685Superset，开发者视角 https://zhuanlan.zhihu.com/c_100045590superset二次开发 https://zhuanlan.zhihu.com/c_151634429]]></content>
       <categories>
         <category>可视化</category>
       </categories>

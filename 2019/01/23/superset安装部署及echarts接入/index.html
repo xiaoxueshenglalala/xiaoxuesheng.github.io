@@ -87,18 +87,18 @@
 
 
 
-  <meta name="description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。superset官方手册 http://superset.apache.org/tutorial.htmlSuperset的安装配置及基础使用手册 https://blog.csdn.net/folecld123/a">
+  <meta name="description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在/assets/下执行npm run dev（注：这里可能会报错，根据错误百度修改），再次重登">
 <meta name="keywords" content="superset">
 <meta property="og:type" content="article">
 <meta property="og:title" content="superset安装部署及echarts接入">
 <meta property="og:url" content="http://pfchen.top/2019/01/23/superset安装部署及echarts接入/index.html">
 <meta property="og:site_name" content="浮 · 生">
-<meta property="og:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。superset官方手册 http://superset.apache.org/tutorial.htmlSuperset的安装配置及基础使用手册 https://blog.csdn.net/folecld123/a">
+<meta property="og:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在/assets/下执行npm run dev（注：这里可能会报错，根据错误百度修改），再次重登">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-18T15:01:01.384Z">
+<meta property="og:updated_time" content="2019-07-19T08:04:23.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="superset安装部署及echarts接入">
-<meta name="twitter:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。superset官方手册 http://superset.apache.org/tutorial.htmlSuperset的安装配置及基础使用手册 https://blog.csdn.net/folecld123/a">
+<meta name="twitter:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在/assets/下执行npm run dev（注：这里可能会报错，根据错误百度修改），再次重登">
 
 
 
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-18 23:01:01" itemprop="dateModified" datetime="2019-07-18T23:01:01+08:00">2019-07-18</time>
+                <time title="修改时间：2019-07-19 16:04:23" itemprop="dateModified" datetime="2019-07-19T16:04:23+08:00">2019-07-19</time>
               </span>
             
           
@@ -484,7 +484,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">918</span>
+              <span title="本文字数">1.2k</span>
             </span>
           
 
@@ -515,7 +515,7 @@
       
 
       
-        <p>&ensp; &ensp; <strong>写在前面：</strong>superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。<br><br><br>superset官方手册 <a href="http://superset.apache.org/tutorial.html" target="_blank" rel="noopener">http://superset.apache.org/tutorial.html</a><br>Superset的安装配置及基础使用手册 <a href="https://blog.csdn.net/folecld123/article/details/80705616" target="_blank" rel="noopener">https://blog.csdn.net/folecld123/article/details/80705616</a><br>Superset在Winodw安装以及问题整理 <a href="https://www.cnblogs.com/Jonecmnn/p/7417498.html" target="_blank" rel="noopener">https://www.cnblogs.com/Jonecmnn/p/7417498.html</a><br>uperset集成kylin2.5.0 <a href="https://www.liangzl.com/get-article-detail-34757.html" target="_blank" rel="noopener">https://www.liangzl.com/get-article-detail-34757.html</a><br>Superset二次开发（全面） <a href="https://blog.csdn.net/oASiDuoFu/article/details/80525651" target="_blank" rel="noopener">https://blog.csdn.net/oASiDuoFu/article/details/80525651</a><br>Superset集成Echarts并调整数据接口-更新0.28.1 <a href="https://zhuanlan.zhihu.com/p/46992404" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/46992404</a><br>接上新版本补充 <a href="https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/" target="_blank" rel="noopener">https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/</a><br>superset接入可视化echarts图表（Python2、superset0.28以前） <a href="https://juejin.im/post/5cde1210f265da03b8587776" target="_blank" rel="noopener">https://juejin.im/post/5cde1210f265da03b8587776</a><br>superset的安装以及和echart整合（superset0.28以前） <a href="https://blog.csdn.net/lzlnd/article/details/85167270" target="_blank" rel="noopener">https://blog.csdn.net/lzlnd/article/details/85167270</a><br>superset云部署 <a href="https://www.jianshu.com/p/9ad7e29792dd" target="_blank" rel="noopener">https://www.jianshu.com/p/9ad7e29792dd</a><br>nginx+gunicorn+upstart方式部署 <a href="https://www.jianshu.com/p/28b42f27744a" target="_blank" rel="noopener">https://www.jianshu.com/p/28b42f27744a</a></p>
+        <p>&ensp; &ensp; <strong>写在前面：</strong>superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在<code>/assets/</code>下执行<code>npm run dev</code>（注：这里可能会报错，根据错误百度修改），再次重登superset就可以了。<br><br><br>推荐-superset官方手册 <a href="http://superset.apache.org/tutorial.html" target="_blank" rel="noopener">http://superset.apache.org/tutorial.html</a><br>Superset的安装配置及基础使用手册 <a href="https://blog.csdn.net/folecld123/article/details/80705616" target="_blank" rel="noopener">https://blog.csdn.net/folecld123/article/details/80705616</a><br>Superset在Winodw安装以及问题整理 <a href="https://www.cnblogs.com/Jonecmnn/p/7417498.html" target="_blank" rel="noopener">https://www.cnblogs.com/Jonecmnn/p/7417498.html</a><br>uperset集成kylin2.5.0 <a href="https://www.liangzl.com/get-article-detail-34757.html" target="_blank" rel="noopener">https://www.liangzl.com/get-article-detail-34757.html</a><br>推荐-Superset二次开发（全面） <a href="https://blog.csdn.net/oASiDuoFu/article/details/80525651" target="_blank" rel="noopener">https://blog.csdn.net/oASiDuoFu/article/details/80525651</a><br>推荐-Superset集成Echarts并调整数据接口-更新0.28.1 <a href="https://zhuanlan.zhihu.com/p/46992404" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/46992404</a><br>接上新版本补充 <a href="https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/" target="_blank" rel="noopener">https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/</a><br>superset接入可视化echarts图表（Python2、superset0.28以前） <a href="https://juejin.im/post/5cde1210f265da03b8587776" target="_blank" rel="noopener">https://juejin.im/post/5cde1210f265da03b8587776</a><br>superset的安装以及和echart整合（superset0.28以前） <a href="https://blog.csdn.net/lzlnd/article/details/85167270" target="_blank" rel="noopener">https://blog.csdn.net/lzlnd/article/details/85167270</a><br>superset云部署 <a href="https://www.jianshu.com/p/9ad7e29792dd" target="_blank" rel="noopener">https://www.jianshu.com/p/9ad7e29792dd</a><br>nginx+gunicorn+upstart方式部署 <a href="https://www.jianshu.com/p/28b42f27744a" target="_blank" rel="noopener">https://www.jianshu.com/p/28b42f27744a</a><br>推荐-用Gunicorn部署Superset <a href="https://zhuanlan.zhihu.com/p/59321685" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/59321685</a><br>Superset，开发者视角 <a href="https://zhuanlan.zhihu.com/c_100045590" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_100045590</a><br>superset二次开发 <a href="https://zhuanlan.zhihu.com/c_151634429" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_151634429</a></p>
 
       
     </div>
