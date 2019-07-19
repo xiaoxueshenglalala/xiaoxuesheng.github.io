@@ -87,18 +87,18 @@
 
 
 
-  <meta name="description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在/assets/下执行npm run dev（注：这里可能会报错，根据错误百度修改），再次重登">
-<meta name="keywords" content="superset">
+  <meta name="description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。通过superset可视化dashboard足以支持一般公司业务需求，更多个性化需求就需要前端开发肝了。百度echarts丰富的map也可以做些补充。相对来说echarts接入较为简单，但是由于不懂前端，这里虽然照做">
+<meta name="keywords" content="superset,echarts">
 <meta property="og:type" content="article">
-<meta property="og:title" content="superset安装部署及echarts接入">
+<meta property="og:title" content="Superset安装部署及Echarts接入">
 <meta property="og:url" content="http://pfchen.top/2019/01/23/superset安装部署及echarts接入/index.html">
 <meta property="og:site_name" content="浮 · 生">
-<meta property="og:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在/assets/下执行npm run dev（注：这里可能会报错，根据错误百度修改），再次重登">
+<meta property="og:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。通过superset可视化dashboard足以支持一般公司业务需求，更多个性化需求就需要前端开发肝了。百度echarts丰富的map也可以做些补充。相对来说echarts接入较为简单，但是由于不懂前端，这里虽然照做">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-19T08:04:23.529Z">
+<meta property="og:updated_time" content="2019-07-19T10:25:08.312Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="superset安装部署及echarts接入">
-<meta name="twitter:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在/assets/下执行npm run dev（注：这里可能会报错，根据错误百度修改），再次重登">
+<meta name="twitter:title" content="Superset安装部署及Echarts接入">
+<meta name="twitter:description" content="&amp;ensp; &amp;ensp; 写在前面：superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。通过superset可视化dashboard足以支持一般公司业务需求，更多个性化需求就需要前端开发肝了。百度echarts丰富的map也可以做些补充。相对来说echarts接入较为简单，但是由于不懂前端，这里虽然照做">
 
 
 
@@ -116,7 +116,7 @@
   };
 </script>
 
-  <title>superset安装部署及echarts接入 | 浮 · 生</title>
+  <title>Superset安装部署及Echarts接入 | 浮 · 生</title>
   
 
 
@@ -392,7 +392,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">superset安装部署及echarts接入
+          <h1 class="post-title" itemprop="name headline">Superset安装部署及Echarts接入
 
               
             
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-19 16:04:23" itemprop="dateModified" datetime="2019-07-19T16:04:23+08:00">2019-07-19</time>
+                <time title="修改时间：2019-07-19 18:25:08" itemprop="dateModified" datetime="2019-07-19T18:25:08+08:00">2019-07-19</time>
               </span>
             
           
@@ -484,7 +484,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">1.2k</span>
+              <span title="本文字数">6k</span>
             </span>
           
 
@@ -496,7 +496,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">1 分钟</span>
+              <span title="阅读时长">5 分钟</span>
             </span>
           
 
@@ -515,7 +515,31 @@
       
 
       
-        <p>&ensp; &ensp; <strong>写在前面：</strong>superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。echarts接入相对简单，由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在<code>/assets/</code>下执行<code>npm run dev</code>（注：这里可能会报错，根据错误百度修改），再次重登superset就可以了。<br><br><br>推荐-superset官方手册 <a href="http://superset.apache.org/tutorial.html" target="_blank" rel="noopener">http://superset.apache.org/tutorial.html</a><br>Superset的安装配置及基础使用手册 <a href="https://blog.csdn.net/folecld123/article/details/80705616" target="_blank" rel="noopener">https://blog.csdn.net/folecld123/article/details/80705616</a><br>Superset在Winodw安装以及问题整理 <a href="https://www.cnblogs.com/Jonecmnn/p/7417498.html" target="_blank" rel="noopener">https://www.cnblogs.com/Jonecmnn/p/7417498.html</a><br>uperset集成kylin2.5.0 <a href="https://www.liangzl.com/get-article-detail-34757.html" target="_blank" rel="noopener">https://www.liangzl.com/get-article-detail-34757.html</a><br>推荐-Superset二次开发（全面） <a href="https://blog.csdn.net/oASiDuoFu/article/details/80525651" target="_blank" rel="noopener">https://blog.csdn.net/oASiDuoFu/article/details/80525651</a><br>推荐-Superset集成Echarts并调整数据接口-更新0.28.1 <a href="https://zhuanlan.zhihu.com/p/46992404" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/46992404</a><br>接上新版本补充 <a href="https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/" target="_blank" rel="noopener">https://note.youdao.com/ynoteshare1/index.html?id=cff32312b36a9f1cb7a2c06b6ee67525&amp;type=note#/</a><br>superset接入可视化echarts图表（Python2、superset0.28以前） <a href="https://juejin.im/post/5cde1210f265da03b8587776" target="_blank" rel="noopener">https://juejin.im/post/5cde1210f265da03b8587776</a><br>superset的安装以及和echart整合（superset0.28以前） <a href="https://blog.csdn.net/lzlnd/article/details/85167270" target="_blank" rel="noopener">https://blog.csdn.net/lzlnd/article/details/85167270</a><br>superset云部署 <a href="https://www.jianshu.com/p/9ad7e29792dd" target="_blank" rel="noopener">https://www.jianshu.com/p/9ad7e29792dd</a><br>nginx+gunicorn+upstart方式部署 <a href="https://www.jianshu.com/p/28b42f27744a" target="_blank" rel="noopener">https://www.jianshu.com/p/28b42f27744a</a><br>推荐-用Gunicorn部署Superset <a href="https://zhuanlan.zhihu.com/p/59321685" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/59321685</a><br>Superset，开发者视角 <a href="https://zhuanlan.zhihu.com/c_100045590" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_100045590</a><br>superset二次开发 <a href="https://zhuanlan.zhihu.com/c_151634429" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_151634429</a></p>
+        <p>&ensp; &ensp; <strong>写在前面：</strong>superset上手非常简易，二次开发要求较高。superset本身依赖Python模块就很多，开发需要深入理解核心模块源码，当然对前端要求也高。通过superset可视化dashboard足以支持一般公司业务需求，更多个性化需求就需要前端开发肝了。百度echarts丰富的map也可以做些补充。相对来说echarts接入较为简单，但是由于不懂前端，这里虽然照做了几遍，重新登录依旧刷不出新图，之后突然意识到要重新编译前端源码，在<code>/assets/</code>下执行<code>npm run dev</code>（注：这里可能会报错，根据错误百度修改），再次重登superset就可以了。</p>
+<ul>
+<li><strong>推荐-superset官方手册 <a href="http://superset.apache.org/tutorial.html" target="_blank" rel="noopener">http://superset.apache.org/tutorial.html</a></strong></li>
+<li>Superset的安装配置及基础使用手册 <a href="https://blog.csdn.net/folecld123/article/details/80705616" target="_blank" rel="noopener">https://blog.csdn.net/folecld123/article/details/80705616</a><br>Superset在Winodw安装以及问题整理 <a href="https://www.cnblogs.com/Jonecmnn/p/7417498.html" target="_blank" rel="noopener">https://www.cnblogs.com/Jonecmnn/p/7417498.html</a></li>
+<li>uperset集成kylin2.5.0 <a href="https://www.liangzl.com/get-article-detail-34757.html" target="_blank" rel="noopener">https://www.liangzl.com/get-article-detail-34757.html</a></li>
+<li>推荐-Superset二次开发（全面） <a href="https://blog.csdn.net/oASiDuoFu/article/details/80525651" target="_blank" rel="noopener">https://blog.csdn.net/oASiDuoFu/article/details/80525651</a></li>
+<li><strong>推荐-Superset集成Echarts并调整数据接口-更新0.28.1 <a href="https://zhuanlan.zhihu.com/p/46992404" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/46992404</a></strong></li>
+<li>superset接入可视化echarts图表（Py2、0.28以前） <a href="https://juejin.im/post/5cde1210f265da03b8587776" target="_blank" rel="noopener">https://juejin.im/post/5cde1210f265da03b8587776</a></li>
+<li>superset的安装以及和echart整合（superset0.28以前） <a href="https://blog.csdn.net/lzlnd/article/details/85167270" target="_blank" rel="noopener">https://blog.csdn.net/lzlnd/article/details/85167270</a></li>
+<li>superset云部署 <a href="https://www.jianshu.com/p/9ad7e29792dd" target="_blank" rel="noopener">https://www.jianshu.com/p/9ad7e29792dd</a></li>
+<li>nginx+gunicorn+upstart方式部署 <a href="https://www.jianshu.com/p/28b42f27744a" target="_blank" rel="noopener">https://www.jianshu.com/p/28b42f27744a</a></li>
+<li><strong>推荐-用Gunicorn部署Superset <a href="https://zhuanlan.zhihu.com/p/59321685" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/59321685</a></strong></li>
+<li>Superset，开发者视角 <a href="https://zhuanlan.zhihu.com/c_100045590" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_100045590</a><br>superset二次开发 <a href="https://zhuanlan.zhihu.com/c_151634429" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_151634429</a><br><br></li>
+</ul>
+<h1 id="Echarts接入核心步骤-以下均来自知乎林余，感谢攻略！-："><a href="#Echarts接入核心步骤-以下均来自知乎林余，感谢攻略！-：" class="headerlink" title="Echarts接入核心步骤(以下均来自知乎林余，感谢攻略！)："></a><strong>Echarts接入核心步骤(以下均来自知乎<a href="https://zhuanlan.zhihu.com/p/46992404" target="_blank" rel="noopener">林余</a>，感谢攻略！)：</strong></h1><h2 id="1-superset-viz-py"><a href="#1-superset-viz-py" class="headerlink" title="1. superset\viz.py"></a>1. superset\viz.py</h2><p>后端处理前端传入数据，根据echarts官网数据格式，模仿其它模块修改接入图表类，主要修改get_data函数<br><figure class="highlight python"><figcaption><span>viz.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">echartsRadar</span><span class="params">(BaseViz)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">""" echarts radar viz """</span></span><br><span class="line"></span><br><span class="line">    viz_type = <span class="string">'echarts_radar'</span> <span class="comment"># 对应前端名字</span></span><br><span class="line">    verbose_name = _(<span class="string">'echarts_radar'</span>)</span><br><span class="line">    is_timeseries = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_data</span><span class="params">(self, df)</span>:</span></span><br><span class="line">        data = self.handle_js_int_overflow(</span><br><span class="line">            dict(</span><br><span class="line">                records=df.to_dict(orient=<span class="string">'records'</span>),</span><br><span class="line">                columns=list(df.columns),</span><br><span class="line">            ))</span><br><span class="line">        columns_pre = [data[<span class="string">'records'</span>][i][data[<span class="string">'columns'</span>][<span class="number">0</span>]] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data[<span class="string">'records'</span>]))]</span><br><span class="line">        max_num = np.max([data[<span class="string">'records'</span>][i][data[<span class="string">'columns'</span>][<span class="number">1</span>]] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data[<span class="string">'records'</span>]))])</span><br><span class="line">        columns = [&#123;<span class="string">'name'</span>: columns_pre[i],</span><br><span class="line">                    <span class="string">'max'</span>:str(max_num)&#125;<span class="keyword">for</span> i <span class="keyword">in</span> range(len(columns_pre))]</span><br><span class="line">        out_data = [</span><br><span class="line">            &#123;<span class="string">'value'</span>: [data[<span class="string">'records'</span>][i][data[<span class="string">'columns'</span>][j+<span class="number">1</span>]] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data[<span class="string">'records'</span>]))],</span><br><span class="line">             <span class="string">'name'</span>:data[<span class="string">'columns'</span>][j+<span class="number">1</span>]&#125;<span class="keyword">for</span> j <span class="keyword">in</span> range(len(data[<span class="string">'columns'</span>])<span class="number">-1</span>)</span><br><span class="line">        ]</span><br><span class="line">        <span class="keyword">return</span> [&#123;<span class="string">'indicator'</span> : columns, <span class="string">'data'</span> : out_data&#125;]</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-superset-static-assets-src-visualizations"><a href="#2-superset-static-assets-src-visualizations" class="headerlink" title="2. superset\static\assets\src\visualizations\"></a>2. superset\static\assets\src\visualizations\</h2><p>前端图标配置文件，也是对接echarts库的文件</p>
+<ul>
+<li>superset\static\assets\src\visualizations\EchartsMap(新增图表文件夹名)  (注：可以把echarts不同类型图表放到一个文件夹下处理，便于管理)</li>
+<li>superset\static\assets\src\visualizations\EchartsMap(新增图表文件夹名)\images  (注：superset图表展示用，从echarts官网直接取图即可，像素大小不影响)</li>
+<li>superset\static\assets\src\visualizations\EchartsMap(新增图表文件夹名)\echarts_radar(新增图表名称).js<figure class="highlight javascript"><figcaption><span>echarts_radar(新增图表名称).js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">'echarts'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">echartsAngularGaugeVis</span>(<span class="params">slice, payload</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> div = d3.select(slice.selector);</span><br><span class="line">    <span class="keyword">const</span> sliceId = <span class="string">'echarts_slice_'</span> + slice.formData.slice_id;</span><br><span class="line">    <span class="keyword">const</span> html = <span class="string">'&lt;div id='</span> + sliceId + <span class="string">' style="width:'</span> + slice.width() + <span class="string">'px;height:'</span> + slice.height() + <span class="string">'px;"&gt;&lt;/div&gt;'</span>;</span><br><span class="line">    div.html(html); <span class="comment">// reset</span></span><br><span class="line">    </span><br><span class="line">   <span class="keyword">const</span> myChart = echarts.init(<span class="built_in">document</span>.getElementById(sliceId));</span><br><span class="line">    </span><br><span class="line">   <span class="comment">// const fd = slice.formData;</span></span><br><span class="line">   <span class="keyword">const</span> params = payload.data; <span class="comment">//这是从后端viz.py获取数据的标准写法</span></span><br><span class="line">   <span class="keyword">const</span> indicator = params[<span class="number">0</span>][<span class="string">"indicator"</span>] <span class="comment">//因为雷达图有两个地方要用到后端传来的数据，根据处理过的数据格式取出来</span></span><br><span class="line">    <span class="keyword">const</span> data = params[<span class="number">0</span>][<span class="string">"data"</span>] <span class="comment">//同上</span></span><br><span class="line">    <span class="keyword">const</span> dataName = [];  <span class="comment">// echarts需要的是两个数组</span></span><br><span class="line"><span class="comment">//以下开始是从echarts官网抄的，当然也可以自己设置，可以对比这一段跟官网的设置（增加了tooltip显示规则和label)</span></span><br><span class="line">    <span class="keyword">const</span> option = &#123;</span><br><span class="line">        tooltip : &#123;</span><br><span class="line">            <span class="comment">// trigger: 'item',</span></span><br><span class="line">            <span class="comment">// formatter: '&#123;a&#125;, &#123;b&#125;，&#123;c&#125;，&#123;d&#125;，&#123;e&#125;'</span></span><br><span class="line">            position: <span class="function"><span class="keyword">function</span> (<span class="params">pos, params, dom, rect, size</span>) </span>&#123;</span><br><span class="line">                <span class="comment">// 鼠标在左侧时 tooltip 显示到右侧，鼠标在右侧时 tooltip 显示到左侧。</span></span><br><span class="line">                <span class="keyword">var</span> obj = &#123;<span class="attr">top</span>: <span class="number">60</span>&#125;;</span><br><span class="line">                obj[[<span class="string">'left'</span>, <span class="string">'right'</span>][+(pos[<span class="number">0</span>] &lt; size.viewSize[<span class="number">0</span>] / <span class="number">2</span>)]] = <span class="number">5</span>;</span><br><span class="line">                <span class="keyword">return</span> obj;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        legend: &#123;</span><br><span class="line">            orient : <span class="string">'vertical'</span>,</span><br><span class="line">            x : <span class="string">'right'</span>,</span><br><span class="line">            y : <span class="string">'bottom'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        toolbox: &#123;</span><br><span class="line">            show : <span class="literal">true</span>,</span><br><span class="line">            feature : &#123;</span><br><span class="line">                mark : &#123;<span class="attr">show</span>: <span class="literal">true</span>&#125;,</span><br><span class="line">                dataView : &#123;<span class="attr">show</span>: <span class="literal">true</span>, <span class="attr">readOnly</span>: <span class="literal">false</span>&#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        radar : &#123;</span><br><span class="line">            indicator: indicator,</span><br><span class="line">            name: &#123;</span><br><span class="line">                textStyle: &#123;</span><br><span class="line">                    color: <span class="string">'#454545'</span>,</span><br><span class="line">                    borderRadius: <span class="number">3</span>,</span><br><span class="line">                    padding: [<span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        series : [</span><br><span class="line">            &#123;</span><br><span class="line">                type : <span class="string">'radar'</span>,</span><br><span class="line">                data : data,</span><br><span class="line">                label: &#123;</span><br><span class="line">                    show: <span class="literal">true</span>,</span><br><span class="line">                    position: [<span class="string">'150%'</span>, <span class="string">'150%'</span>],</span><br><span class="line">                    distance: <span class="number">10</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;;</span><br><span class="line">  <span class="comment">// 使用刚指定的配置项和数据显示图表。</span></span><br><span class="line">  myChart.setOption(option);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = echartsAngularGaugeVis;</span><br></pre></td></tr></table></figure>
+<h2 id="3-superset-static-assets-src-visualizations-index-js"><a href="#3-superset-static-assets-src-visualizations-index-js" class="headerlink" title="3. superset\static\assets\src\visualizations\index.js"></a>3. superset\static\assets\src\visualizations\index.js</h2>主要用来前端后端函数匹配，参照存在格式添加VIZ_TYPES和vizMap，该步简单<figure class="highlight plain"><figcaption><span>VIZ_TYPES</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export const VIZ_TYPES = &#123;</span><br><span class="line">    ……</span><br><span class="line">    echarts_radar: &apos;echarts_radar&apos;, //此行新增</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>vizMap</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const vizMap = &#123;</span><br><span class="line">    ……</span><br><span class="line">    [VIZ_TYPES.echarts_radar]: () =&gt; loadVis(import(&apos;./EchartsMap/echarts_radar.js&apos;)),//此行新增</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="4-superset-static-assets-src-explore-visTypes-jsx"><a href="#4-superset-static-assets-src-explore-visTypes-jsx" class="headerlink" title="4. superset\static\assets\src\explore\visTypes.jsx"></a>4. superset\static\assets\src\explore\visTypes.jsx</h2>前端图标配置区组件设置，就是superset左侧的groupby、metrics等组件的开关，需根据配置的图表需要的数据格式选择合适的组件<figure class="highlight plain"><figcaption><span>visTypes.jsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">export const visTypes = &#123;</span><br><span class="line">    ……</span><br><span class="line">    echarts_radar: &#123;</span><br><span class="line">        label: t(&apos;echarts_radar&apos;),</span><br><span class="line">        showOnExplore: true,</span><br><span class="line">        controlPanelSections: [</span><br><span class="line">            &#123;</span><br><span class="line">                label: t(&apos;Query&apos;),</span><br><span class="line">                expanded: true, //主要是下面的部分，可以找superset原有的图表模板，通过查看sql的方式看看每个配件都是做什么的</span><br><span class="line">                controlSetRows: [</span><br><span class="line">                    [&apos;metrics&apos;],</span><br><span class="line">                    [&apos;columns&apos;],</span><br><span class="line">                    [&apos;adhoc_filters&apos;],</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="5-重新编译前端源代码"><a href="#5-重新编译前端源代码" class="headerlink" title="5. 重新编译前端源代码"></a>5. 重新编译前端源代码</h2>在<code>/assets/</code>下执行<code>npm run dev</code>，再次重登superset。</li>
+</ul>
 
       
     </div>
@@ -548,6 +572,8 @@
           
             <a href="/tags/superset/" rel="tag"># superset</a>
           
+            <a href="/tags/echarts/" rel="tag"># echarts</a>
+          
         </div>
       
 
@@ -569,8 +595,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/18/linux-Centos7安装及问题/" rel="prev" title="linux-Centos7安装及问题">
-                linux-Centos7安装及问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/18/linux-Centos7安装及问题/" rel="prev" title="Linux-Centos7安装、使用及问题">
+                Linux-Centos7安装、使用及问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -615,8 +641,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -705,7 +740,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -776,6 +815,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Echarts接入核心步骤-以下均来自知乎林余，感谢攻略！-："><span class="nav-text">Echarts接入核心步骤(以下均来自知乎林余，感谢攻略！)：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-superset-viz-py"><span class="nav-text">1. superset\viz.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-superset-static-assets-src-visualizations"><span class="nav-text">2. superset\static\assets\src\visualizations\</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-superset-static-assets-src-visualizations-index-js"><span class="nav-text">3. superset\static\assets\src\visualizations\index.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-superset-static-assets-src-explore-visTypes-jsx"><span class="nav-text">4. superset\static\assets\src\explore\visTypes.jsx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-重新编译前端源代码"><span class="nav-text">5. 重新编译前端源代码</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
